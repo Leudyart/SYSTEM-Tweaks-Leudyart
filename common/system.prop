@@ -1,0 +1,292 @@
+# This file will be read by resetprop
+#  TwMax.SmartBattery
+######################################
+###   NEXT ADD BY LEUDYART@ 2023   ###
+
+# DALVIK VIRTUAL MACHINE (VM) CONFIGURATION
+dalvik.vm.heapgrowthlimit=256m
+dalvik.vm.heapsize=512m
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=4m
+dalvik.vm.heapstartsize=16m
+dalvik.vm.heaptargetutilization=0.60
+
+# USE THE PRECISE GARBAGE COLLECTOR
+dalvik.gc.type=precise
+
+# GARBAGE COLLECTION SETTINGS
+dalvik.vm.gc.enable=true
+
+# THREAD SETTINGS
+dalvik.vm.boot-dex2oat-threads=8
+ro.sys.fw.dex2oat_thread_count=8
+dalvik.vm.dex2oat-threads=8
+dalvik.vm.image-dex2oat-threads=8
+
+# JIT COMPILATION SETTINGS
+dalvik.vm.boot-dex2oat-cpu-set=0-7
+dalvik.vm.dex2oat-cpu-set=0-7
+dalvik.vm.image-dex2oat-cpu-set=0-7
+ro.sys.fw.dex2oat_cpu_cores=8
+
+# AOT COMPILATION SETTINGS
+ro.sys.fw.dex2oat_cpu_cores_aot=8
+
+# ENABLE COMPILATION
+ro.sys.fw.dex2oat_enabled=true
+ro.sys.fw.dex2oat_bg_dexopt=true
+dalvik.vm.dex2oat-filter=everything
+
+# ART RUNTIME SETTINGS
+ro.sys.fw.use_art=true
+debug.art.desugar=true
+debug.art.jit=true
+debug.art.oat.ab=true
+debug.art.oat.dex2oat=true
+
+# DALVIK OPTIMIZATION SETTINGS
+dalvik.vm.execution-mode=int:fast
+dalvik.vm.dexopt-flags=v=y,o=n,m=y
+dalvik.vm.verify-bytecode=false
+dalvik.vm.checkjni=false
+dalvik.vm.dexopt-data-only=0
+dalvik.vm.jmiopts=hybrid
+dalvik.vm.stack-trace-file=/data/anr/traces.txt
+
+# Disabling file generation can decrease the size of your applications and can also speed up application startup time. Therefore, you should only disable this setting if you don't need to debug your applications.
+dalvik.vm.minidebuginfo=false
+dalvik.vm.dex2oat-minidebuginfo=false
+
+# IMPROVE THE TOUCH SENSITIVITY OF THE SCREEN
+touch.pressure.scale=0.00000001
+touch.size.calibration=geometric
+touch.size.scale=1.0
+touch.size.bias=0.0
+touch.size.isSummed=0
+touch.orientation.calibration=interpolated
+touch.distance.calibration=scaled
+touch.distance.scale=1.0
+touch.coverage.calibration=box
+touch.gestureMode=extended
+touch.pressure.calibration=amplitude
+MultitouchMinDistance=1px
+MultitouchSettleInterval=0.1ms
+SurfaceOrientation=0
+TapInterval=0.1ms
+TapDragInterval=0.1ms
+QuietInterval=0.1ms
+MovementSpeedRatio=0.8
+SwipeMaxWidthRatio=1
+ZoomSpeedRatio=1
+PointerVelocityControlParameters=1
+VirtualKeyQuietTime=0
+TapSlop=1px
+persist.dev.pm.dyn_samplingrate=1
+persist.sys.ui.hw=1
+DragMinSwitchSpeed=99999.0px/s
+view.touch_slop=4
+ro.product.multi_touch_enabled=true
+ro.product.max_num_touch=10
+ro.touch.pressure.enable=true
+SwipeTransitionAngleCosine=0.6
+
+# Fast typing, keyboard control
+KeyRepeatDelay=0
+KeyRepeatTimeout=0
+
+# TOUCH MOVEMENT TOLERANCE KEEP THE SAME TOUCH AS IOS
+persist.vendor.qti.inputopts.enable=true
+persist.vendor.qti.inputopts.movetouchslop=0.1
+
+# IMPROVE SLIDING RESPONSE( BETTER SCROLLING RESPONSIVENESS AND SPEED )
+windowsmgr.max_events_per_sec=120
+view.scroll_friction=0.01
+touch.deviceType=touchScreen
+ro.min_pointer_dur=4
+video.accelerate.hw=1
+PointerGesture=true
+vendor.perf.gestureflingboost.enable=1
+
+# GRAPHIC PROPERTIES SURFACEFLINGER
+ro.surface_flinger.max_frame_buffer_acquired_buffers=3
+ro.surface_flinger.running_without_sync_framework=true
+ro.surface_flinger.use_color_management=true
+ro.surface_flinger.max_virtual_display_dimension=4096
+ro.surface_flinger.protected_contents=true
+ro.surface_flinger.has_wide_color_display=true
+ro.surface_flinger.force_hwc_copy_for_virtual_displays=true
+ro.surface_flinger.set_touch_timer_ms=150
+ro.surface_flinger.use_smart_refresh_rate=true
+ro.surface_flinger.set_idle_timer_ms=150
+ro.surface_flinger.wcg_composition_dataspace=143261696
+ro.surface_flinger.vsync_event_phase_offset_ns=1000000
+ro.surface_flinger.vsync_sf_event_phase_offset_ns=1000000
+
+# DALVIK HYPERTHREADING
+persist.sys.dalvik.hyperthreading=true
+persist.sys.dalvik.multithread=true
+
+# ENABLE OPENGL RENDERING ON ANDROID
+persist.sys.composition.type=gpu
+debug.renderengine.backend=gles
+persist.sys.force_sw_gles=0
+debug.hwui.renderer=opengl
+
+# ENABLED HARDWARE ACCELERATION FOR EGL (EMBEDDED GRAPHICS LIBRARY) LIBRARIES
+debug.egl.hw=1
+# ENABLE HARDWARE ACCELERATION ON SCREEN SURFACE COMPOSITING (SURFACEFLINGER)
+debug.sf.hw=1
+
+# INCREASE GPU BUFFER COUNT, DOES MAKE RENDERING FASTER
+debug.egl.buffcount=4
+
+# DISABLE VSYNC FOR CPU RENDERED APPS(PERFORMANCE)
+debug.cpurend.vsync=false
+hwui.disable_vsync=true
+
+# OPENGLRENDERER PROPERTIES (LIB HWUI)OPTIMIZE GRAPHICS RENDERING
+ro.hwui.texture_cache_size=128
+ro.hwui.layer_cache_size=64
+ro.hwui.r_buffer_cache_size=128
+ro.hwui.path_cache_size=128
+ro.hwui.gradient_cache_size=64
+ro.hwui.drop_shadow_cache_size=32
+ro.hwui.texture_cache_flushrate=0.4
+ro.hwui.text_small_cache_width=2048
+ro.hwui.text_small_cache_height=1024
+ro.hwui.text_large_cache_width=4096
+ro.hwui.text_large_cache_height=2048
+
+# DISABLED TO TURN OFF UNNECESSARY RENDERING OF DIRTY REGIONS AND REDUCE THEIR OVERHEAD
+debug.hwui.profile.maxframes=60
+debug.hwui.use_partial_updates=true
+debug.hwui.use_gpu_pixel_buffers=false
+
+# NETWORK ACCELERATION ,SET THE DNS SERVERS TO GOOGLE'S SERVERS
+net.rmnet0.dns1=8.8.8.8
+net.rmnet0.dns2=8.8.4.4
+net.dns1=8.8.8.8
+net.dns2=8.8.4.4
+net.ppp0.dns1=8.8.8.8
+net.ppp0.dns2=8.8.4.4
+net.rmnet1.dns1=8.8.8.8
+net.rmnet1.dns2=8.8.4.4
+net.pdpbr1.dns1=8.8.8.8
+net.pdpbr1.dns2=8.8.4.4
+net.wlan0.dns1=8.8.8.8
+net.wlan0.dns2=8.8.4.4
+net.eth0.dns1=8.8.8.8
+net.eth0.dns2=8.8.4.4
+net.gprs.dns1=8.8.8.8
+net.gprs.dns2=8.8.4.4
+
+# WI-FI NETWORK SCANS.SETS WIFI SCANNING INTERVAL, CAN BE INCREASED OR DECREASED
+wifi.supplicant_scan_interval=300
+
+# MEDIA
+mm.enable.smoothstreaming=true
+ro.media.recorder-max-base-layer-fps=60 
+
+# Force the Home program to reside in memory
+ro.HOME_APP_ADJ=1
+
+# ENABLE CAMERA 
+ro.camera.hal3.enabled=true
+persist.camera.HAL3.enabled=1
+persist.camera.eis.enabled=1
+
+# ENABLE IZAT OPTINAPP OVERLAY (OPTIMIZE GPS LOCATION)
+persist.vendor.overlay.izat.optin=rro
+
+# SENSOR SLEEP CONTROL
+ro.ril.sensor.sleep.control=1
+
+# REDUCES ROM BOOT TIME TO SAVE BATTERY.
+ro.config.hw_quickpoweron=true
+
+# BETTER SIGNAL
+persist.cust.tel.eons=1
+
+# CHANGE THE SCREEN REFRESH RATE TO 60HZ
+ro.sf.fps=60
+
+# IT IS IMPORTANT TO NOTE THAT INCREASING THE SENSITIVITY OF GPS MAY INCREASE THE POWER CONSUMPTION OF THE DEVICE.
+# Increase GPS accuracy
+ro.gps.agps_provider=1
+ro.gps.gps_snr_max=48
+ro.gps.supl_server=supl.google.com
+# ENABLE THE USE OF GLONASS (INCREASES THE NUMBER OF AVAILABLE SATELLITES AND IMPROVES accuracy)
+persist.gps.use_gl=1
+# Adjust GPS update rate
+ro.gps.refresh_rate=1000
+
+# ZRAM COMPRESSED MEMORY CONFIGURATIONS
+ro.vendor.qti.config.zram=true
+
+# SET ZRAM COMPRESSION ALGORITHM TO LZ4
+ro.zram.comp_algorithm=lz4
+
+# ENABLE THE NEW DOLBY ATMOS FEATURE
+persist.sys.dolby.atmos.enable=true
+
+# ENABLE THE NEW SMART CHARGING FEATURE
+sys.smartcharging.enable=true
+
+# ENABLE THE NEW NOTIFICATION SMART REPLY FEATURE
+sys.fflag.override.notification_smart_reply_enable=true
+
+# AUDIO IMPROVEMENTS
+ro.media.vol.steps=37
+ro.config.media_vol_steps=37
+ro.config.vc_call_vol_steps=25
+vendor.audio.adm.buffering.ms=6
+
+# GBOARD ON-SCREEN KEYBOARD APPEAR FASTER
+ro.config.kbd_hw_layout=true
+ro.config.kbd_delay=50
+debug.enable_hw_ui=1
+ro.config.kbd_language_switch_delay=100
+
+# DISPLAY
+debug.sf.disable_client_composition_cache=0
+
+#################################
+####           END           ####
+
+# DISABLE ANDROID LOGCAT(IMPROVES PERFORMANCE)
+logcat.live=disable
+logcat.disable=1
+persist.logd.disable=1
+ro.config.nocheckin=1
+logcat.kernel=disable
+
+# DISABLE THE SERVICE THAT COLLECTS PERFORMANCE DATA
+ro.statsd.enable=false
+
+# DISABLE LOGGING FOR DEVICE PROTECTION MANAGER (DPM)
+persist.vendor.dpm.loglevel=0
+persist.vendor.dpmhalservice.loglevel=0
+
+# DISABLE CAMERA DEBUGGING
+persist.camera.mct.debug=0
+persist.camera.iface.logs=0
+persist.camera.imglib.logs=0
+persist.camera.isp.debug=0
+persist.camera.sensor.debug=0
+persist.camera.debug.logfile=0
+
+# DISABLE UNNESESARY THINGS
+wifi.interface=wlan0
+sys.wifitracing.started=0
+persist.vendor.wifienhancelog=0
+logcast.live=disable 
+persist.sys.wifi_track=false 
+
+##################################
+
+ 
+
+
+
+
+
